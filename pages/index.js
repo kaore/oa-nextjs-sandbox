@@ -19,9 +19,12 @@ export async function getServerSideProps() {
 
 function Home({ events, locale }) {
   return (
-    <ul>
+    <ul className="list-group">
       {events.map(event => (
-        <li key={event.uid}>
+        <li
+          className="list-group-item"
+          key={event.uid}
+        >
           <EventItem
             locale={locale}
             event={event}
